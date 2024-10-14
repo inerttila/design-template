@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      scrollbar-width: none;
+    }
+
+    main {
+      position: relative;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    .slider {
+      width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .slide {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+      font-size: 2.5rem;
+      color: rgba(0, 0, 0, 0.75);
+      scroll-snap-align: center;
+
+      &:nth-of-type(odd) {
+        background-color: black;
+        color: white;
+      }
+
+      &:nth-of-type(even) {
+        background-color: white;
+        color: black;
+      }
+    }
+
+    .indicator {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+      transform: translateY(-50%);
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      mix-blend-mode: difference;
+    }
+
+    .indicator-index {
+      position: relative;
+      font: 0.65rem helvetica, sans-serif;
+      color: white;
+      margin: 0.5rem 0;
+      transition: transform 0.5s ease-in-out, margin 0.5s ease-in-out;
+
+      &:first-of-type::before,
+      &:last-of-type::after {
+        content: none;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 0.03rem);
+        transform: translateX(-50%);
+        width: 0.015rem;
+        height: 1.25rem;
+        background-color: white;
+        transform: scaleY(0);
+        transition: transform 0.5s ease-in-out;
+      }
+
+      &::before {
+        top: -1.3rem;
+        transform-origin: bottom;
+      }
+
+      &::after {
+        bottom: -1.3rem;
+        transform-origin: top;
+      }
+    }
+
+    .expand {
+      transform: scale(3);
+      margin: 5rem 0;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &::before,
+      &::after {
+        transform: scaleY(1);
+      }
+    }
+  </style>
+
+  <body>
+    <main>
+      <ul class="slider">
+        <li class="slide" data-index="0">ha</li>
+        <li class="slide" data-index="1">kar</li>
+        <li class="slide" data-index="2">bio</li>
+        <li class="slide" data-index="3">⧄</li>
+        <li class="slide" data-index="4">▧</li>
+      </ul>
+      <ul class="indicator">
+        <li class="indicator-index">home</li>
+        <li class="indicator-index">store</li>
+        <li class="indicator-index">kar</li>
+        <li class="indicator-index">bio</li>
+        <li class="indicator-index">ha</li>
+      </ul>
+    </main>
+  </body>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    const indicators = document.querySelectorAll(".indicator-index");
+
+    function update(entries) {
+      entries.forEach((entry) => {
+        const i = entry.target.dataset.index;
+        indicators[i].classList.toggle("expand", entry.isIntersecting);
+      });
+    }
+
+    function detect(slide) {
+      const options = { threshold: 0.2 };
+      const io = new IntersectionObserver(update, options);
+      io.observe(slide);
+    }
+
+    const init = () => slides.forEach(detect);
+
+    window.addEventListener("load", init, false);
+  </script>
+</html>
