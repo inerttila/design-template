@@ -36,6 +36,10 @@
             <img
               src="https://3dskai.com/wp-content/uploads/2024/10/image9-scaled.jpg"
               alt="Description of image" />
+            <video class="video" controls style="display: none">
+              <source src="/3DSKAI_SPOT_final.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
           <div class="content">
             <h2 class="title">Sophie</h2>
@@ -53,6 +57,7 @@
             </button>
           </div>
         </li>
+
         <li class="slide">
           <div class="visual"></div>
           <div class="content">
@@ -302,17 +307,32 @@ gl_Position = position;
         if (e.target.closest(".nav")) {
           setXOff(slider, 0);
 
+          // Reset the running state and stop the video for the current slide
+          const currentSlide = slider.querySelector(".slide"); // Get the currently active slide
+          const video = currentSlide.querySelector(".video"); // Get the video element
+          const image = currentSlide.querySelector("img"); // Get the image element
+          const button = currentSlide.querySelector(".more"); // Get the button element
+
+          // Stop video playback and reset the state
+          if (video) {
+            video.pause(); // Pause the video
+            video.style.display = "none"; // Hide the video
+            image.style.display = "block"; // Show the image
+            running = false; // Update running state
+            button.querySelector("use").setAttribute("xlink:href", "#play"); // Reset the button icon
+          }
+
+          // Navigate to the next or previous item
           setTimeout(
             () => {
-              e.target.matches(".next") && slider.append(items[0]);
-              e.target.matches(".prev") &&
-                slider.prepend(items[items.length - 1]);
+              if (e.target.matches(".next")) {
+                slider.append(items[0]); // Move the first item to the end
+              } else if (e.target.matches(".prev")) {
+                slider.prepend(items[items.length - 1]); // Move the last item to the beginning
+              }
 
               // Cleanup
               removeCanvas();
-              document
-                .querySelectorAll(".slide .more use")
-                .forEach((p) => p.setAttribute("xlink:href", "#play"));
             },
             running ? 1000 : 0
           );
@@ -374,6 +394,8 @@ gl_Position = position;
 
         for (const item of listItems) {
           const button = item.querySelector(".more");
+          const video = item.querySelector(".video");
+          const image = item.querySelector("img");
 
           button.addEventListener("click", (e) => {
             const slide = e.target.closest(".slide");
@@ -384,21 +406,16 @@ gl_Position = position;
               .querySelector("use")
               .setAttribute("xlink:href", running ? "#pause" : "#play");
 
-            if (!running) {
-              // Bring back the thumbnails
-              setXOff(slider, 0);
-              return;
-            }
-
-            // Hide the thumbnails
-            setXOff(slider, 100);
-
-            if (slide.querySelector("canvas")) {
-              running = true;
-              loop(0, slide.dataset.shaderIndex);
+            if (running) {
+              // Show the video and hide the image
+              image.style.display = "none"; // Hide the image
+              video.style.display = "block"; // Show the video
+              video.play(); // Start playing the video
             } else {
-              // Set up the canvas and start the animation
-              animate(slide);
+              // Bring back the image and pause the video
+              image.style.display = "block"; // Show the image
+              video.pause(); // Pause the video
+              video.style.display = "none"; // Hide the video
             }
           });
         }
