@@ -141,9 +141,7 @@
         </li>
         <li class="slide">
           <div class="visual">
-            <img
-              src="/c74f778e43d546778162aa139d763689.jpeg"
-              alt="Description of image" />
+            <img src="/Dron1-removebg-preview.png" alt="Description of image" />
             <video class="video" controls style="display: none">
               <source src="/3DSKAI_SPOT_final.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -454,11 +452,17 @@ gl_Position = position;
               image.style.display = "none"; // Hide the image
               video.style.display = "block"; // Show the video
               video.play(); // Start playing the video
+
+              // Hide the thumbnails (cards)
+              setXOff(slider, 100); // Move the slider to hide all thumbnails
             } else {
               // Bring back the image and pause the video
               image.style.display = "block"; // Show the image
               video.pause(); // Pause the video
               video.style.display = "none"; // Hide the video
+
+              // Show the thumbnails (cards)
+              setXOff(slider, 0); // Reset the slider to show all thumbnails
             }
           });
         }
@@ -483,14 +487,49 @@ gl_Position = position;
       setup();
       resize();
 
-      // Instead of rendering shaders to background images, just set a static image
+      // Get all slides
       const slides = document.querySelectorAll(".slide");
-      slides.forEach((slide) => {
-        const img = slide.querySelector("img");
-        if (img) {
-          slide.style.backgroundImage = `url(${img.src})`;
-        }
-      });
+
+      // Check if shaders exist
+      if (programs.length > 0 && shaders.length > 0) {
+        return new Promise((resolve) => {
+          for (let i = 0; i < programs.length; i++) {
+            // Decrease the resolution for all but the first two shaders to improve performance
+            if (i > 1) {
+              dpr = Math.max(1, 0.25 * window.devicePixelRatio); // Lower resolution
+              resize();
+            }
+
+            draw(0, programs[i]); // Draw shader onto the canvas
+            const img = canvas.toDataURL(); // Get the image data from the canvas
+            const slide = slides[i]; // Get the current slide
+
+            slide.style.backgroundImage = `url(${img})`; // Set background image to the shader result
+            slide.dataset.shaderIndex = i; // Assign shader index
+            slide.dataset.rerendered = `${canvas.width}x${canvas.height}`; // Save rendered resolution
+            slide.querySelector(".title").textContent =
+              shaders[i].dataset.title; // Set the title based on shader data
+          }
+
+          // Reset the resolution to full
+          dpr = Math.max(1, window.devicePixelRatio);
+
+          // Regenerate the images with full resolution after 2 seconds
+          setTimeout(
+            async () => await regenerateImagesWithFullResolution(),
+            2000
+          );
+          resolve();
+        });
+      } else {
+        // If shaders don't exist, just set static images
+        slides.forEach((slide) => {
+          const img = slide.querySelector("img");
+          if (img) {
+            slide.style.backgroundImage = `url(${img.src})`; // Set the image src as background
+          }
+        });
+      }
     }
 
     async function regenerateImagesWithFullResolution(all = false) {
