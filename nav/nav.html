@@ -20,144 +20,146 @@
   </head>
 
   <body>
-    <nav class="max-w-[1240px] mx-auto" x-data="{ openNav: false }">
-      <div class="px-4 pt-4 pt-0 min-[845px]:pt-9 transition-all">
-        <div class="flex justify-between">
-          <div class="flex">
-            <div
-              class="logo flex flex-shrink-0 items-center text-white hover:text-[#E730CA] transition-colors">
-              <svg
-                class="hidden md:block logo-svg transform hover: transition-transform duration-700"
-                style="transform-style: preserve-3d"
-                xmlns="http://www.w3.org/2000/svg"
-                width="90"
-                height="90"
-                viewBox="0 0 280 259">
-                <g
-                  transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
-                  fill="currentColor">
-                  <path
-                    d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
+    <div
+      class="mx-auto min-[845px]:w-full min-[845px]:fixed min-[845px]:top-0 min-[845px]:left-0 min-[845px]:right-0 min-[845px]:z-50 min-[845px]:bg-gray-800 min-[845px]:bg-opacity-40 min-[845px]:backdrop-blur-md">
+      <nav class="max-w-[1240px] mx-auto" x-data="{ openNav: false }">
+        <div class="px-4 pt-4 pt-0 min-[845px]:pt-9 transition-all">
+          <div class="flex justify-between">
+            <div class="flex">
+              <div
+                class="logo flex flex-shrink-0 items-center text-white hover:text-[#E730CA] transition-colors">
+                <svg
+                  class="hidden md:block logo-svg transform hover: transition-transform duration-700"
+                  style="transform-style: preserve-3d"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="90"
+                  height="90"
+                  viewBox="0 0 280 259">
+                  <g
+                    transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
+                    fill="currentColor">
+                    <path
+                      d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
                                  210 -340 270 -436 59 -96 120 -188 134 -203 32 -33 59 -32 86 4 l19 26 -66
                                  234 c-36 129 -91 324 -121 434 -31 112 -66 216 -79 236 -38 59 -91 78 -236 85
                                  -107 5 -127 4 -147 -11z m304 -53 c22 -11 44 -29 51 -40 6 -11 30 -86 53 -168
                                  23 -82 78 -276 122 -432 74 -263 84 -312 59 -312 -5 0 -41 51 -79 113 -38 61
                                  -163 263 -277 447 -114 184 -215 347 -223 361 -9 15 -12 33 -8 44 6 17 17 18
                                  135 12 101 -4 137 -10 167 -25z" />
-                  <path
-                    d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
+                    <path
+                      d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
                                  51 -104 90 -153 122 -153 8 0 27 12 43 28 36 33 541 940 541 971 0 40 -18 61
                                  -52 61 -28 0 -67 -36 -351 -317z m373 273 c0 -8 -109 -209 -241 -448 -133
                                  -238 -251 -451 -263 -473 -24 -46 -34 -55 -59 -55 -12 0 -33 32 -72 116 -61
                                  129 -69 178 -36 229 27 41 643 645 659 645 6 0 12 -6 12 -14z" />
-                  <path
-                    d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
+                    <path
+                      d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
                                  33 -20 240 -20 207 0 221 1 240 20 11 11 20 28 20 38 0 26 -206 383 -233 404
                                  -29 23 -34 23 -66 -9z m105 -115 c32 -57 82 -143 111 -191 29 -48 53 -92 53
                                  -97 0 -6 -89 -10 -230 -10 -155 0 -230 3 -230 11 0 17 223 398 231 394 4 -3
                                  33 -51 65 -107z" />
-                  <path
-                    d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
+                    <path
+                      d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
                                  295 -85 417 -121 330 -96 348 -92 473 88 80 116 89 152 44 187 -26 21 -35 21
                                  -576 21 l-549 0 -24 -25z m1142 -32 c7 -18 2 -28 -80 -148 -32 -47 -71 -92
                                  -87 -100 -43 -22 -104 -18 -215 14 -55 16 -163 48 -240 70 -77 23 -221 64
                                  -320 92 -308 88 -303 89 376 89 512 0 560 -1 566 -17z" />
-                </g>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="md:hidden"
-                width="60"
-                height="60"
-                viewBox="0 0 280 259">
-                <g
-                  transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
-                  fill="currentColor"
-                  stroke="none">
-                  <path
-                    d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
-                                 210 -340 270 -436 59 -96 120 -188 134 -203 32 -33 59 -32 86 4 l19 26 -66
-                                 234 c-36 129 -91 324 -121 434 -31 112 -66 216 -79 236 -38 59 -91 78 -236 85
-                                 -107 5 -127 4 -147 -11z m304 -53 c22 -11 44 -29 51 -40 6 -11 30 -86 53 -168
-                                 23 -82 78 -276 122 -432 74 -263 84 -312 59 -312 -5 0 -41 51 -79 113 -38 61
-                                 -163 263 -277 447 -114 184 -215 347 -223 361 -9 15 -12 33 -8 44 6 17 17 18
-                                 135 12 101 -4 137 -10 167 -25z" />
-                  <path
-                    d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
-                                 51 -104 90 -153 122 -153 8 0 27 12 43 28 36 33 541 940 541 971 0 40 -18 61
-                                 -52 61 -28 0 -67 -36 -351 -317z m373 273 c0 -8 -109 -209 -241 -448 -133
-                                 -238 -251 -451 -263 -473 -24 -46 -34 -55 -59 -55 -12 0 -33 32 -72 116 -61
-                                 129 -69 178 -36 229 27 41 643 645 659 645 6 0 12 -6 12 -14z" />
-                  <path
-                    d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
-                                 33 -20 240 -20 207 0 221 1 240 20 11 11 20 28 20 38 0 26 -206 383 -233 404
-                                 -29 23 -34 23 -66 -9z m105 -115 c32 -57 82 -143 111 -191 29 -48 53 -92 53
-                                 -97 0 -6 -89 -10 -230 -10 -155 0 -230 3 -230 11 0 17 223 398 231 394 4 -3
-                                 33 -51 65 -107z" />
-                  <path
-                    d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
-                                 295 -85 417 -121 330 -96 348 -92 473 88 80 116 89 152 44 187 -26 21 -35 21
-                                 -576 21 l-549 0 -24 -25z m1142 -32 c7 -18 2 -28 -80 -148 -32 -47 -71 -92
-                                 -87 -100 -43 -22 -104 -18 -215 14 -55 16 -163 48 -240 70 -77 23 -221 64
-                                 -320 92 -308 88 -303 89 376 89 512 0 560 -1 566 -17z" />
-                </g>
-              </svg>
-            </div>
-          </div>
-
-          <div
-            style="height: 60px !important"
-            class="hidden min-[845px]:flex sm:space-x-8">
-            <a
-              href="#"
-              class="relative text-[#E730CA] hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-full before:bg-white"
-              aria-current="page"
-              >Home</a
-            >
-            <a
-              href="#hot-drops"
-              class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
-              >Store</a
-            >
-            <a
-              href="#"
-              class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
-              >Collections</a
-            >
-            <a
-              href="#"
-              class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
-              >Community</a
-            >
-          </div>
-
-          <div class="flex items-center space-x-7">
-            <a
-              href="https://3dskai.com/en/contact-us/"
-              class="relative group hidden min-[845px]:flex bg-transparent min-w-44 w-44 h-12 rounded-lg overflow-hidden border border-[#E730CA] font-semibold text-[#E730CA] sm:hover:text-white sm:hover:border-[#561950] transition-all duration-700"
-              style="will-change: transform"
-              id="cta">
-              <span
-                x-on:mouseover="openError = flase"
-                class="flex justify-center items-center h-full w-full sm:transform sm:group-hover:-translate-x-3.5 transition-transform cursor-pointer duration-700"
-                >Contact Us</span
-              >
-              <span
-                class="absolute top-0 -right-8 sm:group-hover:right-0 h-full flex justify-center items-center px-1.5 bg-[#E730CA] transition-all cursor-pointer duration-700">
+                  </g>
+                </svg>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="#131313"
-                  class="w-[18px] h-4">
-                  <path
-                    d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                  class="md:hidden"
+                  width="60"
+                  height="60"
+                  viewBox="0 0 280 259">
+                  <g
+                    transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
+                    fill="currentColor"
+                    stroke="none">
+                    <path
+                      d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
+                                 210 -340 270 -436 59 -96 120 -188 134 -203 32 -33 59 -32 86 4 l19 26 -66
+                                 234 c-36 129 -91 324 -121 434 -31 112 -66 216 -79 236 -38 59 -91 78 -236 85
+                                 -107 5 -127 4 -147 -11z m304 -53 c22 -11 44 -29 51 -40 6 -11 30 -86 53 -168
+                                 23 -82 78 -276 122 -432 74 -263 84 -312 59 -312 -5 0 -41 51 -79 113 -38 61
+                                 -163 263 -277 447 -114 184 -215 347 -223 361 -9 15 -12 33 -8 44 6 17 17 18
+                                 135 12 101 -4 137 -10 167 -25z" />
+                    <path
+                      d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
+                                 51 -104 90 -153 122 -153 8 0 27 12 43 28 36 33 541 940 541 971 0 40 -18 61
+                                 -52 61 -28 0 -67 -36 -351 -317z m373 273 c0 -8 -109 -209 -241 -448 -133
+                                 -238 -251 -451 -263 -473 -24 -46 -34 -55 -59 -55 -12 0 -33 32 -72 116 -61
+                                 129 -69 178 -36 229 27 41 643 645 659 645 6 0 12 -6 12 -14z" />
+                    <path
+                      d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
+                                 33 -20 240 -20 207 0 221 1 240 20 11 11 20 28 20 38 0 26 -206 383 -233 404
+                                 -29 23 -34 23 -66 -9z m105 -115 c32 -57 82 -143 111 -191 29 -48 53 -92 53
+                                 -97 0 -6 -89 -10 -230 -10 -155 0 -230 3 -230 11 0 17 223 398 231 394 4 -3
+                                 33 -51 65 -107z" />
+                    <path
+                      d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
+                                 295 -85 417 -121 330 -96 348 -92 473 88 80 116 89 152 44 187 -26 21 -35 21
+                                 -576 21 l-549 0 -24 -25z m1142 -32 c7 -18 2 -28 -80 -148 -32 -47 -71 -92
+                                 -87 -100 -43 -22 -104 -18 -215 14 -55 16 -163 48 -240 70 -77 23 -221 64
+                                 -320 92 -308 88 -303 89 376 89 512 0 560 -1 566 -17z" />
+                  </g>
                 </svg>
-              </span>
-            </a>
+              </div>
+            </div>
 
-            <div class="hidden min-[845px]:flex justify-center">
-              <div
-                x-data="{
+            <div
+              style="height: 60px !important"
+              class="hidden min-[845px]:flex sm:space-x-8">
+              <a
+                href="#"
+                class="relative text-[#E730CA] hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-full before:bg-white"
+                aria-current="page"
+                >Home</a
+              >
+              <a
+                href="#hot-drops"
+                class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
+                >Store</a
+              >
+              <a
+                href="#"
+                class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
+                >Collections</a
+              >
+              <a
+                href="#"
+                class="relative text-white hover:text-[#E730CA] inline-flex items-center font-bold before:content-[''] before:absolute before:bottom-2.5 before:left-1/2 before:transform before:-translate-x-1/2 before:h-[1.5px] before:w-0 before:bg-white before:transition-all before:hover:w-full before:duration-500"
+                >Community</a
+              >
+            </div>
+
+            <div class="flex items-center space-x-7">
+              <a
+                href="https://3dskai.com/en/contact-us/"
+                class="relative group hidden min-[845px]:flex bg-transparent min-w-44 w-44 h-12 rounded-lg overflow-hidden border border-[#E730CA] font-semibold text-[#E730CA] sm:hover:text-white sm:hover:border-[#561950] transition-all duration-700"
+                style="will-change: transform"
+                id="cta">
+                <span
+                  x-on:mouseover="openError = flase"
+                  class="flex justify-center items-center h-full w-full sm:transform sm:group-hover:-translate-x-3.5 transition-transform cursor-pointer duration-700"
+                  >Contact Us</span
+                >
+                <span
+                  class="absolute top-0 -right-8 sm:group-hover:right-0 h-full flex justify-center items-center px-1.5 bg-[#E730CA] transition-all cursor-pointer duration-700">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="#131313"
+                    class="w-[18px] h-4">
+                    <path
+                      d="M2.273 5.625A4.483 4.483 0 0 1 5.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 3H5.25a3 3 0 0 0-2.977 2.625ZM2.273 8.625A4.483 4.483 0 0 1 5.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0 0 18.75 6H5.25a3 3 0 0 0-2.977 2.625ZM5.25 9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h13.5a3 3 0 0 0 3-3v-6a3 3 0 0 0-3-3H15a.75.75 0 0 0-.75.75 2.25 2.25 0 0 1-4.5 0A.75.75 0 0 0 9 9H5.25Z" />
+                  </svg>
+                </span>
+              </a>
+
+              <div class="hidden min-[845px]:flex justify-center">
+                <div
+                  x-data="{
                                                   open: false,
                                                   toggle() {
                                                           if (this.open) {
@@ -196,230 +198,232 @@
                                                           this.items = this.items.filter(item => item.id !== id);
                                                   }
                                           }"
-                x-on:keydown.escape.prevent.stop="close($refs.button)"
-                x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
-                x-id="['dropdown-button']"
-                class="relative">
-                <!-- Button -->
-                <button
-                  x-ref="button"
-                  x-on:click="toggle()"
-                  :aria-expanded="open"
-                  :aria-controls="$id('dropdown-button')"
-                  type="button"
-                  class="flex hover:text-white transition-colors"
-                  :class="count > 0 ? 'text-[#e730ca] max-w-[46px]' : 'text-white/20 max-w-[28px]'">
-                  <svg
-                    class="bell-con"
-                    fill="currentColor"
-                    viewBox="0 0 448 512"
-                    width="50"
-                    title="bell">
-                    <path
-                      d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z" />
-                  </svg>
-                  <span
-                    x-show="count > 0"
-                    class="flex justify-center items-center text-xs notification-count text-white bg-[#e730ca] rounded-full min-h-[18px] min-w-[18px] max-h-[18px] max-w-[18px]"
-                    x-text="count"></span>
-                </button>
+                  x-on:keydown.escape.prevent.stop="close($refs.button)"
+                  x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+                  x-id="['dropdown-button']"
+                  class="relative">
+                  <!-- Button -->
+                  <button
+                    x-ref="button"
+                    x-on:click="toggle()"
+                    :aria-expanded="open"
+                    :aria-controls="$id('dropdown-button')"
+                    type="button"
+                    class="flex hover:text-white transition-colors"
+                    :class="count > 0 ? 'text-[#e730ca] max-w-[46px]' : 'text-white/20 max-w-[28px]'">
+                    <svg
+                      class="bell-con"
+                      fill="currentColor"
+                      viewBox="0 0 448 512"
+                      width="50"
+                      title="bell">
+                      <path
+                        d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z" />
+                    </svg>
+                    <span
+                      x-show="count > 0"
+                      class="flex justify-center items-center text-xs notification-count text-white bg-[#e730ca] rounded-full min-h-[18px] min-w-[18px] max-h-[18px] max-w-[18px]"
+                      x-text="count"></span>
+                  </button>
 
-                <!-- Panel -->
-                <div
-                  x-ref="panel"
-                  x-show="open"
-                  x-transition.origin.top.left
-                  x-on:click.outside="close($refs.button)"
-                  :id="$id('dropdown-button')"
-                  style="display: none"
-                  class="absolute right-0 top-[42px] mt-2 min-w-[262px] rounded-md bg-white z-50">
-                  <template x-for="item in items" :key="item.id">
-                    <div
-                      class="flex items-center justify-between gap-1 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm disabled:text-gray-500 group">
-                      <span x-html="item.text"> </span>
-                      <svg
-                        x-on:click="removeItemFromItems(item.id)"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        class="w-5 h-5 group-hover:text-gray-300 text-transparent hover:stroke-[#e730ca] stroke-transparent transition-colors cursor-pointer">
-                        <path
-                          d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-                      </svg>
-                    </div>
-                  </template>
+                  <!-- Panel -->
+                  <div
+                    x-ref="panel"
+                    x-show="open"
+                    x-transition.origin.top.left
+                    x-on:click.outside="close($refs.button)"
+                    :id="$id('dropdown-button')"
+                    style="display: none"
+                    class="absolute right-0 top-[42px] mt-2 min-w-[262px] rounded-md bg-white z-50">
+                    <template x-for="item in items" :key="item.id">
+                      <div
+                        class="flex items-center justify-between gap-1 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left text-sm disabled:text-gray-500 group">
+                        <span x-html="item.text"> </span>
+                        <svg
+                          x-on:click="removeItemFromItems(item.id)"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          class="w-5 h-5 group-hover:text-gray-300 text-transparent hover:stroke-[#e730ca] stroke-transparent transition-colors cursor-pointer">
+                          <path
+                            d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                        </svg>
+                      </div>
+                    </template>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="-mr-2 flex items-center min-[845px]:hidden">
-            <button
-              type="button"
-              x-on:click="openNav = true"
-              class="relative inline-flex items-center justify-center p-1 text-white hover:text-[#E730CA] focus:outline-none focus:ring-0 focus:ring-transparent focus:ring-offset-0 transition-colors"
-              aria-controls="mobile-menu"
-              aria-expanded="false">
-              <span class="absolute -inset-0.5"></span>
-              <span class="sr-only">Open main menu</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-8 h-8">
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div
-        x-cloak
-        x-show="openNav"
-        class="relative z-50 lg:hidden"
-        role="dialog"
-        aria-modal="true">
-        <div
-          x-cloak
-          x-show="openNav"
-          x-transition:enter="transition-opacity ease-linear duration-300"
-          x-transition:enter-start="opacity-0"
-          x-transition:enter-end="opacity-100"
-          x-transition:leave="transition-opacity ease-linear duration-300"
-          x-transition:leave-start="opacity-100"
-          x-transition:leave-end="opacity-0"
-          class="fixed inset-0 bg-gray-900/80"></div>
-
-        <div
-          x-cloak
-          x-show="openNav"
-          x-transition:enter="transition ease-in-out duration-300 transform"
-          x-transition:enter-start="-translate-x-full"
-          x-transition:enter-end="translate-x-0"
-          x-transition:leave="transition ease-in-out duration-300 transform"
-          x-transition:leave-start="translate-x-0"
-          x-transition:leave-end="-translate-x-full"
-          class="fixed inset-0 flex">
-          <div
-            x-cloak
-            x-show="openNav"
-            x-transition:enter="ease-in-out duration-300"
-            x-transition:enter-start="opacity-0"
-            x-transition:enter-end="opacity-100"
-            x-transition:leave="ease-in-out duration-300"
-            x-transition:leave-start="opacity-100"
-            x-transition:leave-end="opacity-0"
-            class="relative mr-16 flex w-full max-w-xs flex-1">
-            <div class="absolute left-full top-0 flex w-16 justify-center pt-5">
+            <div class="-mr-2 flex items-center min-[845px]:hidden">
               <button
                 type="button"
-                x-on:click="openNav = false"
-                class="-m-2.5 p-2.5">
-                <span class="sr-only">Close sidebar</span>
+                x-on:click="openNav = true"
+                class="relative inline-flex items-center justify-center p-1 text-white hover:text-[#E730CA] focus:outline-none focus:ring-0 focus:ring-transparent focus:ring-offset-0 transition-colors"
+                aria-controls="mobile-menu"
+                aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
                 <svg
-                  class="h-6 w-6 text-white"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  aria-hidden="true">
+                  class="w-8 h-8">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    d="M6 18L18 6M6 6l12 12" />
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
               </button>
             </div>
+          </div>
+        </div>
 
+        <div
+          x-cloak
+          x-show="openNav"
+          class="relative z-50 lg:hidden"
+          role="dialog"
+          aria-modal="true">
+          <div
+            x-cloak
+            x-show="openNav"
+            x-transition:enter="transition-opacity ease-linear duration-300"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition-opacity ease-linear duration-300"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed inset-0 bg-gray-900/80"></div>
+
+          <div
+            x-cloak
+            x-show="openNav"
+            x-transition:enter="transition ease-in-out duration-300 transform"
+            x-transition:enter-start="-translate-x-full"
+            x-transition:enter-end="translate-x-0"
+            x-transition:leave="transition ease-in-out duration-300 transform"
+            x-transition:leave-start="translate-x-0"
+            x-transition:leave-end="-translate-x-full"
+            class="fixed inset-0 flex">
             <div
-              class="flex grow flex-col gap-y-5 overflow-y-auto bg-[#131313] px-6 pb-2">
-              <div class="flex h-16 shrink-0 items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="40pt"
-                  height="40pt"
-                  viewBox="0 0 280 259"
-                  preserveAspectRatio="xMidYMid meet">
-                  <g
-                    transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
-                    fill="#FFFFFF"
-                    stroke="none">
+              x-cloak
+              x-show="openNav"
+              x-transition:enter="ease-in-out duration-300"
+              x-transition:enter-start="opacity-0"
+              x-transition:enter-end="opacity-100"
+              x-transition:leave="ease-in-out duration-300"
+              x-transition:leave-start="opacity-100"
+              x-transition:leave-end="opacity-0"
+              class="relative mr-16 flex w-full max-w-xs flex-1">
+              <div
+                class="absolute left-full top-0 flex w-16 justify-center pt-5">
+                <button
+                  type="button"
+                  x-on:click="openNav = false"
+                  class="-m-2.5 p-2.5">
+                  <span class="sr-only">Close sidebar</span>
+                  <svg
+                    class="h-6 w-6 text-white"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    aria-hidden="true">
                     <path
-                      d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div
+                class="flex grow flex-col gap-y-5 overflow-y-auto bg-[#131313] px-6 pb-2">
+                <div class="flex h-16 shrink-0 items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40pt"
+                    height="40pt"
+                    viewBox="0 0 280 259"
+                    preserveAspectRatio="xMidYMid meet">
+                    <g
+                      transform="translate(0.000000,259.000000) scale(0.100000,-0.100000)"
+                      fill="#FFFFFF"
+                      stroke="none">
+                      <path
+                        d="M1232 2375 c-30 -22 -42 -54 -30 -84 5 -13 81 -141 170 -285 89 -144
                                      210 -340 270 -436 59 -96 120 -188 134 -203 32 -33 59 -32 86 4 l19 26 -66
                                      234 c-36 129 -91 324 -121 434 -31 112 -66 216 -79 236 -38 59 -91 78 -236 85
                                      -107 5 -127 4 -147 -11z m304 -53 c22 -11 44 -29 51 -40 6 -11 30 -86 53 -168
                                      23 -82 78 -276 122 -432 74 -263 84 -312 59 -312 -5 0 -41 51 -79 113 -38 61
                                      -163 263 -277 447 -114 184 -215 347 -223 361 -9 15 -12 33 -8 44 6 17 17 18
                                      135 12 101 -4 137 -10 167 -25z" />
-                    <path
-                      d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
+                      <path
+                        d="M647 1293 c-175 -175 -327 -335 -338 -355 -33 -64 -25 -112 35 -235
                                      51 -104 90 -153 122 -153 8 0 27 12 43 28 36 33 541 940 541 971 0 40 -18 61
                                      -52 61 -28 0 -67 -36 -351 -317z m373 273 c0 -8 -109 -209 -241 -448 -133
                                      -238 -251 -451 -263 -473 -24 -46 -34 -55 -59 -55 -12 0 -33 32 -72 116 -61
                                      129 -69 178 -36 229 27 41 643 645 659 645 6 0 12 -6 12 -14z" />
-                    <path
-                      d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
+                      <path
+                        d="M1341 1403 c-37 -38 -221 -363 -221 -391 0 -12 9 -31 20 -42 19 -19
                                      33 -20 240 -20 207 0 221 1 240 20 11 11 20 28 20 38 0 26 -206 383 -233 404
                                      -29 23 -34 23 -66 -9z m105 -115 c32 -57 82 -143 111 -191 29 -48 53 -92 53
                                      -97 0 -6 -89 -10 -230 -10 -155 0 -230 3 -230 11 0 17 223 398 231 394 4 -3
                                      33 -51 65 -107z" />
-                    <path
-                      d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
+                      <path
+                        d="M1205 655 c-31 -30 -31 -37 -2 -69 17 -20 63 -37 217 -81 107 -31
                                      295 -85 417 -121 330 -96 348 -92 473 88 80 116 89 152 44 187 -26 21 -35 21
                                      -576 21 l-549 0 -24 -25z m1142 -32 c7 -18 2 -28 -80 -148 -32 -47 -71 -92
                                      -87 -100 -43 -22 -104 -18 -215 14 -55 16 -163 48 -240 70 -77 23 -221 64
                                      -320 92 -308 88 -303 89 376 89 512 0 560 -1 566 -17z" />
-                  </g>
-                </svg>
+                    </g>
+                  </svg>
+                </div>
+                <nav class="flex flex-1 flex-col">
+                  <ul role="list" class="flex flex-1 flex-col gap-y-7">
+                    <li>
+                      <ul role="list" class="-mx-2 space-y-1">
+                        <li>
+                          <a
+                            href="#"
+                            class="bg-[#E730CA]/80 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                            Home
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#hot-drops"
+                            class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                            Store
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                            Collections
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
+                            Community
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <nav class="flex flex-1 flex-col">
-                <ul role="list" class="flex flex-1 flex-col gap-y-7">
-                  <li>
-                    <ul role="list" class="-mx-2 space-y-1">
-                      <li>
-                        <a
-                          href="#"
-                          class="bg-[#E730CA]/80 text-white group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                          Home
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#hot-drops"
-                          class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                          Store
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                          Collections
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="text-gray-300 hover:text-white hover:bg-[#E730CA]/80 group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold">
-                          Community
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
     <svg style="display: none">
       <path
